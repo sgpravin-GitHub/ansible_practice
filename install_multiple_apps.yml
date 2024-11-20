@@ -1,0 +1,9 @@
+---
+- name: install multiple apps using yum package
+  hosts: prod
+  become: true
+  tasks:
+  - name: install multiple apps on prod
+    yum:
+      name: ['git', 'tree', 'gzip', 'wget','telnet'] #specify multiple applications using list
+      state: installed

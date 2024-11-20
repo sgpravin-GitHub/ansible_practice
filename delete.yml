@@ -1,0 +1,17 @@
+## notify and handlers
+#
+---
+- name: notify and handlers playbook
+  become: true
+  hosts: all
+  tasks:
+  - name: this will install httpd
+    yum:
+      name: httpd
+      state: installed
+    notify: start httpd
+  handlers:
+  - name: start httpd
+    service:
+      name: httpd
+      state: started

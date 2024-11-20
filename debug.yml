@@ -1,0 +1,10 @@
+---
+- name: this play book debug the script
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+  - name: debug the script
+    debug:
+      msg : "{{ ansible_facts.os_family }}"
+

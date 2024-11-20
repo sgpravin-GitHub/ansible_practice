@@ -1,0 +1,16 @@
+---
+- name: this playbook will show how to use notify and handlers
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+  - name: install apache
+    yum:
+      name: httpd
+      state: installed
+    notify: start apache
+  handlers:    
+  - name: start apache
+    service:
+      name: httpd
+      state: started

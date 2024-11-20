@@ -1,0 +1,12 @@
+---
+- name: this play book install git
+  hosts: prod, qa
+  become: true
+  tasks:
+    - name: this will install git on the machine
+      yum: 
+        name: git
+        state: installed
+
+
+     

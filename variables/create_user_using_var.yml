@@ -1,0 +1,10 @@
+---
+- name: create user using variable
+  hosts: all
+  become: true
+  vars:
+    user: modi
+  tasks:
+  - name: create user
+    user:
+      name: "{{user}}"

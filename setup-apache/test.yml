@@ -1,0 +1,6 @@
+---
+- name: this play book install httpd using ansible role
+  hosts: all
+  become: true
+  roles:
+    - setup-apache

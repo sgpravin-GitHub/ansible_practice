@@ -1,0 +1,11 @@
+---
+- name: this playbook use the COPY module to copy the file
+  hosts: all
+  become: true
+  tasks:
+  - name: this will copy the file
+    copy:
+     src: /home/ansadmin/temp.txt
+     dest: /home/ansadmin/test
+     owner: gaddi
+     mode: 0600

@@ -1,0 +1,11 @@
+---
+- name: this play book will uninstall git from target machines
+  #  hosts: prod, qa
+  hosts: all
+  become: true
+  tasks:
+  - name: Uninstall git
+    yum:
+      name: git
+        #state: latest
+      state: removed #this will remove git from the machine

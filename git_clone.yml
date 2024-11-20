@@ -1,0 +1,9 @@
+---
+- name: this playbook will clone the git repo.
+  hosts: all
+  become: true
+  tasks:
+  - name: clone git repo
+    git:
+      repo: https://github.com/sgpravin-GitHub/git_practice.git
+      dest: /home/ansadmin/git_repo

@@ -1,0 +1,9 @@
+---
+- name: this play book will install docker
+  hosts: all
+  become: true
+  tasks:
+    - name: this will install docker
+      yum:
+        name: docker
+        state: latest

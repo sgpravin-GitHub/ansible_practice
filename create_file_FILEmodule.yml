@@ -1,0 +1,17 @@
+---
+- name: this playbook will create text file-one.txt, create a folder-test, delete file-1.txt
+  hosts: all
+  become: true
+  tasks:
+  - name: this will create a file
+    file:
+     path: "/home/ansadmin/one.txt"
+     state: "touch"
+  - name: this will create a folder
+    file:
+     path: "/home/ansadmin/test/"
+     state: "directory"
+  - name: this will delete a file
+    file:
+     path: "/home/ansadmin/1.txt"
+     state: "absent"

@@ -1,0 +1,8 @@
+---
+- name: This playbook will create users
+  hosts: all
+  become: true
+  tasks:
+  - name: create ansible iser
+    user:
+      name: gaddi

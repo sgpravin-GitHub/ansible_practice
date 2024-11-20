@@ -1,0 +1,8 @@
+---
+- name: this playbook uses YUM module to install software on remote machine
+  hosts: all
+  become: true
+  tasks:
+  - name: install git
+    yum:
+      name: git

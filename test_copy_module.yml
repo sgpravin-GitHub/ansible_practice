@@ -1,0 +1,10 @@
+---
+- name: this playbook will demostrate the copy module
+  become: true
+  hosts: prod
+  tasks:
+  - name: copy the file
+    copy:
+      src: /home/ansadmin/copy-file.txt
+      dest: /home/ec2-user/
+      mode: 0666
